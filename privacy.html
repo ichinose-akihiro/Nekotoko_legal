@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ネコトコ | プライバシーポリシー</title>
+  <meta name="description" content="ネコトコアプリのプライバシーポリシー。収集する情報、利用目的、第三者提供、データ削除の方法について記載しています。" />
+  <meta property="og:title" content="ネコトコ | プライバシーポリシー" />
+  <meta property="og:description" content="ネコトコアプリのプライバシーポリシーです。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/Nekotoko_Startpic.png" />
+  <link rel="icon" href="assets/images/Nekotoko_icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
   <div class="page">
     <header class="header">
       <div class="logo">
@@ -25,7 +32,8 @@
       </nav>
     </header>
 
-    <article class="doc">
+    <main id="main">
+      <article class="doc">
       <h1>プライバシーポリシー</h1>
       <p>ネコトコ（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、以下の方針に基づき個人情報・利用情報を取り扱います。</p>
       <p>制定日 / 最終更新日: 2026年2月11日</p>
@@ -99,6 +107,7 @@
       <ul>
         <li>アプリをアンインストールすると端末内のローカルデータは削除されます。</li>
         <li>プレゼンスデータは一定時間更新がない場合に表示されなくなります。</li>
+        <li>サーバー上のデータ（プレゼンス情報）の削除をご希望の場合は、下記お問い合わせ先までご連絡ください。ご本人確認のうえ、速やかに対応いたします。</li>
       </ul>
 
       <h2 id="sec-9">9. お問い合わせ</h2>
@@ -107,12 +116,18 @@
         <div>運営者名: 一ノ瀬あきひろ</div>
         <div>連絡先メールアドレス: 準備中</div>
       </div>
-    </article>
+      </article>
+    </main>
+
+    <button class="back-to-top" aria-label="ページトップへ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
     <footer class="footer">
       <div>お問い合わせ: メール準備中</div>
       <div>ネコトコ Legal Site</div>
     </footer>
   </div>
+  <script>
+    (function(){var b=document.querySelector('.back-to-top');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>300)});})();
+  </script>
 </body>
 </html>

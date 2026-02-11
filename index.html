@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ネコトコ | 法務ページ</title>
+  <meta name="description" content="猫の気配と一緒に集中するアプリ「ネコトコ」の利用規約・プライバシーポリシー・特定商取引法に基づく表記を掲載しています。" />
+  <meta property="og:title" content="ネコトコ | 法務ページ" />
+  <meta property="og:description" content="猫の気配と一緒に集中するアプリ「ネコトコ」の法務情報ページです。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/Nekotoko_Startpic.png" />
+  <link rel="icon" href="assets/images/Nekotoko_icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
   <div class="page">
     <header class="header">
       <div class="logo">
@@ -25,7 +32,8 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <main id="main">
+      <section class="hero">
       <div class="hero-card">
         <h1>ネコトコ ホーム</h1>
         <p>
@@ -36,12 +44,7 @@
           <span class="badge">iOS / Android</span>
           <span class="badge">Firebase 利用</span>
           <span class="badge">匿名プレゼンス</span>
-          <span class="badge">買い切り / 月額</span>
-        </div>
-        <div class="hero-actions">
-          <a class="btn" href="privacy.html">プライバシーポリシー</a>
-          <a class="btn" href="terms.html">利用規約</a>
-          <a class="btn" href="tokusho.html">特商法表記</a>
+          <span class="badge">買い切り</span>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -80,7 +83,10 @@
           ポモドーロ・フリーのタイマーモード、ASMR サウンド、背景テーマ、集中ログなど、集中作業を心地よく続けるための機能がそろっています。
         </p>
       </div>
-    </section>
+      </section>
+    </main>
+
+    <button class="back-to-top" aria-label="ページトップへ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
     <footer class="footer">
       <div>最終更新日: 2026年2月11日</div>
@@ -88,5 +94,8 @@
       <div>ネコトコ Legal Site</div>
     </footer>
   </div>
+  <script>
+    (function(){var b=document.querySelector('.back-to-top');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>300)});})();
+  </script>
 </body>
 </html>

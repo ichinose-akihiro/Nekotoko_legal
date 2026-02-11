@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ネコトコ | 特定商取引法に基づく表記</title>
+  <meta name="description" content="ネコトコアプリの特定商取引法に基づく表記。販売事業者情報、価格、支払方法、返金条件を掲載しています。" />
+  <meta property="og:title" content="ネコトコ | 特定商取引法に基づく表記" />
+  <meta property="og:description" content="ネコトコアプリの特定商取引法に基づく表記です。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/Nekotoko_Startpic.png" />
+  <link rel="icon" href="assets/images/Nekotoko_icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
   <div class="page">
     <header class="header">
       <div class="logo">
@@ -25,7 +32,8 @@
       </nav>
     </header>
 
-    <article class="doc">
+    <main id="main">
+      <article class="doc">
       <h1>特定商取引法に基づく表記</h1>
       <p>制定日 / 最終更新日: 2026年2月11日</p>
 
@@ -37,6 +45,7 @@
         </ul>
       </div>
 
+      <div class="table-wrap">
       <table id="overview">
         <tr>
           <th>販売事業者名</th>
@@ -89,19 +98,26 @@
         </tr>
         <tr>
           <th>動作環境</th>
-          <td>iOS / Android</td>
+          <td>iOS 16.0 以上 / Android 8.0（API 26）以上</td>
         </tr>
       </table>
+      </div>
 
       <div class="notice">
         本表記に関するお問い合わせは上記連絡先までご連絡ください。
       </div>
-    </article>
+      </article>
+    </main>
+
+    <button class="back-to-top" aria-label="ページトップへ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
     <footer class="footer">
       <div>お問い合わせ: メール準備中</div>
       <div>ネコトコ Legal Site</div>
     </footer>
   </div>
+  <script>
+    (function(){var b=document.querySelector('.back-to-top');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>300)});})();
+  </script>
 </body>
 </html>
