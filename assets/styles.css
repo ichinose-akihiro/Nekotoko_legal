@@ -163,37 +163,6 @@ button:focus-visible {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  border: 1px solid rgba(26, 26, 26, 0.12);
-  background: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn.primary {
-  background: var(--accent);
-  color: #fff;
-  border-color: transparent;
-  box-shadow: 0 10px 22px rgba(255, 122, 89, 0.3);
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
 .hero-visual {
   position: relative;
   min-height: 220px;
@@ -309,6 +278,10 @@ button:focus-visible {
   font-size: 20px;
 }
 
+.doc p {
+  line-height: 1.8;
+}
+
 .toc {
   background: rgba(255, 122, 89, 0.08);
   border-radius: 16px;
@@ -320,12 +293,18 @@ button:focus-visible {
   color: var(--ink);
   text-decoration: underline;
   text-decoration-color: rgba(31, 36, 43, 0.35);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.toc a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .doc ul {
   padding-left: 18px;
   line-height: 1.8;
-  color: var(--muted);
+  color: #3d4a57;
 }
 
 .doc table {
@@ -454,15 +433,44 @@ button:focus-visible {
   }
 
   .hero-visual {
-    min-height: 180px;
-  }
-
-  .hero-visual .card {
-    inset: 22% 14% 18% 18%;
+    display: none;
   }
 
   .back-to-top {
     bottom: 16px;
     right: 16px;
+  }
+}
+
+@media print {
+  body::before,
+  .hero-visual,
+  .back-to-top,
+  .skip-link {
+    display: none !important;
+  }
+
+  html, body {
+    background: #fff !important;
+  }
+
+  .header {
+    position: static;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    backdrop-filter: none;
+    background: #fff;
+  }
+
+  .doc,
+  .card,
+  .hero-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
+
+  a[href]::after {
+    content: none;
   }
 }
